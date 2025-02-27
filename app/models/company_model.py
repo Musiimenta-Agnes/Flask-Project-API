@@ -4,17 +4,17 @@ from datetime import datetime
 
 
 
-class Company(db.model):
+class Company(db.Model):
     #Adding the name of the table
     __tablename__  = 'company'
 
     # Adding a constructor
     
-    id = db.column(db.Integer, primary_key = True, nullable = False)
-    origin = db.column(db.String(20), nullable = False)
-    description = db.column(db.String(200), nullable = False)
-    created_at= db.column(db.Datetime, defalut = datetime.now())
-    updated_at = db.column(db.Datetime, default = datetime.now())
+    id = db.Column(db.Integer, primary_key = True, nullable = False)
+    origin = db.Column(db.String(20), nullable = False)
+    description = db.Column(db.String(200), nullable = False)
+    created_at= db.Column(db.DateTime, default = datetime.now())
+    updated_at = db.Column(db.DateTime, default = datetime.now())
     
 
     def __init__(self,name, id, origin, description,created_at, updated_at):

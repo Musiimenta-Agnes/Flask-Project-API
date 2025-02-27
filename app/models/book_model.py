@@ -9,13 +9,13 @@ class Book(db.Model):
    
     id = db.Column(db.Integer, primary_key=True, nullable = False)
     title = db.Column(db.String(20), nullable = False)
-    price = db.Column(db.Integr(20), nullable = False)
-    description = db.Column(db.String(200, nullable = False))
+    price = db.Column(db.Integer, nullable = False)
+    description = db.Column(db.String(200), nullable = False)
     image = db.Column(db.String(20), nullable = True)
-    pages = db.Column(db.Integer(20), nullable = False)
-    publication_date = db.Column(db.Integer(20), nullable = False)
-    created_at = db.Column(db.Datetime, default = datetime.now())
-    updated_at = db.Column(db.Dtaetime, default = datetime.now())
+    pages = db.Column(db.Integer, nullable = False)
+    publication_date = db.Column(db.Integer, nullable = False)
+    created_at = db.Column(db.DateTime, default = datetime.now())
+    updated_at = db.Column(db.DateTime, default = datetime.now())
 
 
     def __init__(self, id, title, price, description, image, pages, publication_date,created_at,updated_at  ):
